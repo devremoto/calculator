@@ -1,5 +1,8 @@
 name: Unit Test With Coverage
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 jobs:
   build:
