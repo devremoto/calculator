@@ -16,7 +16,7 @@ jobs:
          dotnet-version: 6.0.x 
 
     - name: Test
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover,lcov,cobertura\" /p:CoverletOutput=./reports/ Calculator.Test
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover,lcov,cobertura\" /p:Exclude=\"[*]Program*,[*]StringExtensions*\" /p:CoverletOutput=./reports/ Calculator.Test
 
     - name: Create Test Coverage Badge
       uses: simon-k/dotnet-code-coverage-badge@v1.0.0
