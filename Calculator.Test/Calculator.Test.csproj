@@ -27,14 +27,15 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Calculator\Calculator.csproj" />
 	</ItemGroup>
+	
 
 	<PropertyGroup Label="FineCodeCoverage">
 		<Enabled>True</Enabled>
 		<Include>[*]*</Include>
-		<ExcludeByFile>
-			**/Migrations/*
-			**/Program.cs
-		</ExcludeByFile>
+		<Exclude>
+			[*]Program*
+			[*]StringExtensions*
+		</Exclude>
 		<IncludeTestAssembly>False</IncludeTestAssembly>
 	</PropertyGroup>
 
