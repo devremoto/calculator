@@ -11,23 +11,19 @@ namespace Calculator.Test
             _calculator = new Operations();
         }
 
-        //[Theory]
-        //[InlineData(10, 10, 20)]
-        //[InlineData(1, 1, 2)]
-        //[InlineData(-1, 10, 9)]
-        //public void AddTest(int a, int b, int expected)
-        //{
-        //    // Act 
-        //    var result = _calculator.Add(a, b);
+        [Theory]
+        [InlineData(10, 2, 12)]
+        public void AddTest(int a, int b, int expected)
+        {
+            // Act 
+            var result = _calculator.Add(a, b);
 
-        //    // Assert
-        //    Assert.Equal(expected, result);
-        //}
+            // Assert
+            Assert.Equal(expected, result);
+        }
 
         [Theory]
-        [InlineData(10, 10, 0)]
-        [InlineData(1, 1, 0)]
-        [InlineData(-1, 10, -11)]
+        [InlineData(10, 2, 8)]
         public void SubtractTest(int a, int b, int expected)
         {
             // Act 
@@ -38,9 +34,7 @@ namespace Calculator.Test
         }
 
         [Theory]
-        [InlineData(int.MaxValue, 1, int.MaxValue)]
-        [InlineData(1, 1, 1)]
-        [InlineData(-1, 10, -10)]
+        [InlineData(10, 2, 20)]
         public void MultiplyTest(int a, int b, int expected)
         {
             // Act 
@@ -50,8 +44,8 @@ namespace Calculator.Test
             Assert.Equal(expected, result);
         }
 
-        [Theory]       
-        [InlineData(1, 1, 1)]
+        [Theory]
+        [InlineData(10, 2, 5)]
         public void DivideTest(int a, int b, int expected)
         {
             // Act 

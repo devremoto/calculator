@@ -5,7 +5,7 @@ var operations = new Operations();
 Exec(Operator.Add,      10, 2);
 Exec(Operator.Subtract, 10, 2);
 Exec(Operator.Multiply, 10, 2);
-Exec(Operator.Divide,   10, 2);
+Exec(Operator.Divide,   10, 0);
 
 void Exec(Operator op, int a, int b)
 {
