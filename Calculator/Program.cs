@@ -1,15 +1,11 @@
 ﻿using Calculator;
 
 var operations = new Operations();
-//Console.WriteLine("Add {0}", operations.Add(1, 1));
-//Console.WriteLine("Subtract {0}", operations.Subtract(1, 1));
-//Console.WriteLine("Multiply {0}", operations.Multiply(1, 1));
-//Console.WriteLine("Divide {0}", operations.Divide(1, 2));
 
-Exec(Operator.Add,      1, 1);
-Exec(Operator.Subtract, 1, 1);
-Exec(Operator.Multiply, 1, 1);
-Exec(Operator.Divide,   1, 2);
+Exec(Operator.Add,      10, 2);
+Exec(Operator.Subtract, 10, 2);
+Exec(Operator.Multiply, 10, 2);
+Exec(Operator.Divide,   10, 2);
 
 void Exec(Operator op, int a, int b)
 {

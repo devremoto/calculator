@@ -5,6 +5,6 @@ del %report_dir% /Q
 
 dotnet test --no-build  /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover,lcov,cobertura\" /p:Exclude=\"[*]Program*,[*]StringExtensions*\" /p:CoverletOutput=reports/ Calculator.Test 
 
-reportgenerator -reports:%report_dir%\coverage.cobertura.xml -targetdir:%report_dir% %filters%
+reportgenerator -reports:%report_dir%\coverage.cobertura.xml -targetdir:%report_dir%
 
 start %report_dir%\index.html
